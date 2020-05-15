@@ -42,12 +42,7 @@ public class Client {
 
 //    public static void main(String[] args) {
 //        Client client = new Client();
-//        System.out.println("Will try to get Bart...");
-//        System.out.println(client.getContact(3).getName());
-//
-//        System.out.println("Will try to get Simpsons...");
-//        Collection<Contact> simpsons = client.getContacts(Optional.empty(), Optional.of("Simpsons"), Optional.empty());
-//        simpsons.forEach(simpson -> {System.out.println(simpson.getName());});
+//        ===
 //    }
 
 }
