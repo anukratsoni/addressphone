@@ -2,11 +2,6 @@ package travelling.with.code.restful.phonebook.dao;
 
 /**
  * A class containing all the useful information of a contact in the phone book.
- * <p/>
- * When a phone book user wants to insert a new contact in the book, he will only be
- * concerned about the information included in this class.
- *
- * @author <a href="mailto:travelling.with.code@gmail.com">Alex</a>
  */
 public class Contact {
 
