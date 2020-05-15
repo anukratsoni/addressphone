@@ -25,17 +25,7 @@ import travelling.with.code.restful.phonebook.exceptions.ContactNotFoundExceptio
 import travelling.with.code.restful.phonebook.exceptions.IllegalContactException;
 
 /**
- * A controller that will handle HTTP requests to the server, following Spring’s approach to building RESTful web services.
- * The controller is actually a concept of the Spring MVC framework.
- * <p/>
- * It is a common pattern for a server to include a front controller,
- * which gathers all requests to the server and then delegates responsibility for processing them to other components. A Spring
- * framework typically uses a {@link DispatcherServlet} as a front controller.
- * <p/>
- * The component that takes responsibility to process the request from the front controller is the {@link Controller}, and it
- * applies server's business logic. This class is a controller that will handle (REST) HTTP requests for the project's phonebook.
- *
- * 
+ * A controller that will handle HTTP requests to the server
  */
 @RestController
 @RequestMapping("/phonebook/contacts")
