@@ -35,7 +35,7 @@ import travelling.with.code.restful.phonebook.exceptions.IllegalContactException
  * The component that takes responsibility to process the request from the front controller is the {@link Controller}, and it
  * applies server's business logic. This class is a controller that will handle (REST) HTTP requests for the project's phonebook.
  *
- * @author <a href="mailto:travelling.with.code@gmail.com">Alex</a>
+ * 
  */
 @RestController
 @RequestMapping("/phonebook/contacts")
