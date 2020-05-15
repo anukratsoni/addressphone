@@ -35,14 +35,12 @@ public class PhoneBookController {
     private PhoneBook phoneBook;
 
     /**
-     * Exposes the URI "phonebook/contacts" and "listens" for GET reqeusts. If the request does not contain any more parameters,
-     * the method will return all contacts that exist in the phonebook. If some of the optional parameters "name", "surname" or "phone" exist in the HTTP request,
-     * it will return the contacts matching these values.
+     * Exposes the URI "phonebook/contacts" and "listens" for GET reqeusts. 
      *
      * @param name - the name to be looked up in phonebook contacts.
      * @param surname - the surname to be looked up in phonebook contacts.
      * @param phone - the phone to be looked up in phonebook contacts.
-     * @return a collection of contacts that match with the name, surname and/or phone provided by the request. If no parameters are provided returns all the contacts in the phonebook.
+     * 
      */
 	@ApiOperation("Search inside the phone book contacts by name, surname or phone. If you provide no search criteria all the contacts will be returned.")
     @RequestMapping(method=RequestMethod.GET, produces="application/json")
@@ -66,13 +64,10 @@ public class PhoneBookController {
     }
 
     /**
-     * Adds the contact included in the request body to the phone book. The {@link Contact} provided by the client
-     * will contain no indexing, but just the name, surname and phone details. It does not matter if there is already
-     * another client with the same details. The new client will be provided with a unique id and be added in
-     * the phone book.
+     * Adds the contact included in the request body to the phone book.
      *
      * @param contact - the contact to be added in the phone book.
-     * @return an {@link IndexedContact}, which has the same details with the contact provided, but also the unique id that identifies it in the phone book.
+     * @return 
      */
 	@ApiOperation("Add an un-indexed contact to the phone book. Provide just name, surname and phone the the phone book will handle its indexing.")
     @RequestMapping(method=RequestMethod.POST, consumes="application/json", produces="application/json")
@@ -82,9 +77,7 @@ public class PhoneBookController {
     }
 
     /**
-     * Adds the {@link IndexedContact} in the request body to the phone book. If there already exists a contact
-     * under the specific URI it will update the contact. For this reason the URI's id and the {@link IndexedContact}'s id
-     * should be the same. If there is not contact yet, it will create it with
+     * If there is not contact yet, it will create it with
      * the request body.
      *
      * @param id - the id that identifies the resource (contact) to be added.
