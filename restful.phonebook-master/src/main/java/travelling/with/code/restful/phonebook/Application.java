@@ -21,23 +21,6 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @Bean
-    public Docket phoneBookApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("phonebook-api")
-                .apiInfo(apiInfo())
-                .select()
-                    .paths(PathSelectors.regex("/phonebook/contacts.*"))
-                .build();
-    }
 
-    private ApiInfo apiInfo() {
-        return new ApiInfoBuilder()
-                .title("RESTful Phone Book")
-                .description("This is a demo phone book project, which includes names and phones of characters on the Simpsons TV show. Phones may not be valid, so don't rush to give your favourite characters a call!")
-                .contact("alex (travelling.with.code@gmail.com)")
-                .version("1.0")
-                .build();
-    }
 
 }
